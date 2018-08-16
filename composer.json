@@ -1,0 +1,36 @@
+{
+    "version": "1.0.0",
+    "name": "robuust/fixtures",
+    "description": "Yii2 fixtures for Craft 3",
+    "type": "craft-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bob Olde Hampsink",
+            "email": "bob@robuust.digital"
+        }
+    ],
+    "support": {
+        "email": "bob@robuust.digital"
+    },
+    "extra": {
+        "handle": "fixtures",
+        "name": "Fixtures",
+        "developer": "Robuust",
+        "developerUrl": "https://robuust.digital",
+        "documentationUrl": "https://github.com/robuust/craft-fixtures/blob/master/README.md",
+        "changelogUrl": "https://github.com/robuust/craft-fixtures/blob/master/CHANGELOG.md",
+        "downloadUrl": "https://github.com/robuust/craft-fixtures/releases/latest",
+        "hasSettings": false,
+        "hasCpSection": false
+    },
+    "require": {
+        "php": "^7.0",
+        "craftcms/cms": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "robuust\\fixtures\\": "src/"
+        }
+    }
+}
