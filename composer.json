@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "name": "robuust/fixtures",
+    "name": "robuust/craft-fixtures",
     "description": "Yii2 fixtures for Craft 3",
     "type": "craft-plugin",
     "license": "MIT",
