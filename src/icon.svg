@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="550px" height="550px" viewBox="0 0 550 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3</title>
+    <title>Group 5</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Fixture" transform="translate(-420.000000, -212.000000)">
-            <g id="Group-3" transform="translate(420.000000, 212.000000)">
-                <rect id="Rectangle" fill="#000000" x="0" y="0" width="600" height="600" rx="200"></rect>
-                <g id="Group-2" transform="translate(80.000000, 170.000000)">
-                    <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="6" fill="#FFFFFF" x="14" y="192" width="354" height="24"></rect>
-                    <path d="M60,240 L60,100 C60,44.771525 104.771525,3.85670157e-14 160,2.84217094e-14 L190,0 L190,70.2084605 L155,70.2084605 C138.431458,70.2084605 125,83.639918 125,100.20846 L125,240 L60,240 Z" id="Path-2" stroke="#FFFFFF" stroke-width="10" fill="#000000"></path>
-                    <path d="M250,240 L250,100 C250,44.771525 294.771525,3.85670157e-14 350,2.84217094e-14 L380,0 L380,70.2084605 L345,70.2084605 C328.431458,70.2084605 315,83.639918 315,100.20846 L315,240 L250,240 Z" id="Path-2-Copy" stroke="#FFFFFF" stroke-width="10" fill="#000000" transform="translate(315.000000, 120.000000) scale(-1, 1) translate(-315.000000, -120.000000) "></path>
-                    <rect id="Rectangle-3" stroke="#FFFFFF" stroke-width="6" fill="#FFFFFF" x="44" y="182" width="14" height="44"></rect>
-                    <g id="Group" transform="translate(0.000000, 122.000000)" fill="#FFFFFF">
-                        <rect id="Rectangle-4" x="7" y="12" width="10" height="140" rx="5"></rect>
-                        <circle id="Oval-Copy" cx="12.5" cy="12.5" r="12.5"></circle>
-                        <circle id="Oval-Copy-2" cx="12.5" cy="152.5" r="12.5"></circle>
-                    </g>
+        <g id="Fixture" transform="translate(-1507.000000, -153.000000)">
+            <g id="Group-5" transform="translate(1507.000000, 153.000000)">
+                <g id="Group-3-Copy-2" fill="#000000">
+                    <rect id="Rectangle" x="0" y="0" width="550" height="550" rx="200"></rect>
+                </g>
+                <g id="Group-4-Copy" transform="translate(275.000000, 275.000000) rotate(90.000000) translate(-275.000000, -275.000000) translate(135.000000, 170.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+                    <polygon id="ROBUUST-Copy-66" transform="translate(140.000000, 95.000000) scale(-1, 1) translate(-140.000000, -95.000000) " points="215 140 215 0 250 0 280 140 280 190 4.54747351e-13 190 4.54747351e-13 140"></polygon>
+                    <polygon id="ROBUUST-Copy-65" fill="#000000" points="110 210 110 0 145 0 175 120 175 210"></polygon>
                 </g>
             </g>
         </g>
