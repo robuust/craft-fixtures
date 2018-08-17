@@ -105,8 +105,7 @@ Once you install the Plugin in Craft, you can run some command line actions. Whe
     fixtures/fixture/unload           Unloads the specified fixtures.
 ```
 
-The `fixtures/fixture` actions are extended from Yii2 and will take the same arguments. Run all your fixtures with 
-```./craft fixtures/fixture/load "*"```
+The `fixtures/fixture` actions are extended from Yii2 and will take the same arguments. Run all your fixtures with `./craft fixtures/fixture/load "*"`
 
 ### Running fixture migrations
 
