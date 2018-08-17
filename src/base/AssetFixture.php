@@ -6,13 +6,13 @@ use Craft;
 use craft\elements\Asset;
 
 /**
+ * Fixture for Asset Model
+ *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital
- *
- * Fixture for Asset Model
  */
 abstract class AssetFixture extends ElementFixture
 {

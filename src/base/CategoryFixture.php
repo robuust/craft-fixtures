@@ -6,13 +6,13 @@ use Craft;
 use craft\elements\Category;
 
 /**
+ * Fixture for Category Model
+ *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital
- *
- * Fixture for Category Model
  */
 abstract class CategoryFixture extends ElementFixture
 {

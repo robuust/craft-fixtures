@@ -6,13 +6,13 @@ use Craft;
 use craft\elements\Entry;
 
 /**
+ * Fixture for Entry Model
+ *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital
- *
- * Fixture for Entry Model
  */
 abstract class EntryFixture extends ElementFixture
 {

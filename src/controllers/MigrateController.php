@@ -6,16 +6,16 @@ use yii\console\controllers\MigrateController as BaseMigrateController;
 use yii\helpers\Console;
 
 /**
+ * Manages fixture migrations.
+ *
+ * This class is essentially the same as its parent,
+ * except for that it disables Craft's audit columns in the inserts.
+ *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital
- *
- * Migrate controller for fixtures.
- *
- * This class is essentially the same as its parent,
- * except for that it disables Craft's audit columns in the inserts.
  */
 class MigrateController extends BaseMigrateController
 {

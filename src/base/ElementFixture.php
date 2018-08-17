@@ -9,13 +9,13 @@ use yii\test\ActiveFixture;
 use craft\base\Element;
 
 /**
+ * Fixture for Element Model
+ *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital
- *
- * Fixture for Element Model
  */
 abstract class ElementFixture extends ActiveFixture
 {
