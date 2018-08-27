@@ -129,7 +129,19 @@ The `fixtures/migrate` actions are extended from Craft and will take the same ar
 
 ### Using fixtures in tests
 
-You can also load fixtures in tests the way the [Yii2 docs describe it](https://www.yiiframework.com/doc/guide/2.0/en/test-fixtures#using-fixtures). 
+To use these fixtures in [Codeception](https://codeception.com/) tests with Craft 3 you can use the `robuust\fixtures\test\Craft` module in stead of using [Codeception's Yii2 module](https://codeception.com/docs/modules/Yii2). 
+
+```yaml
+modules:
+    enabled:
+        - \robuust\fixtures\test\Craft:
+            part: [init, fixtures]
+            configFile: 'config/app.test.php' # based on vendor/craftcms/cms/tests/_craft/config/test.php
+            entryUrl: 'http://localhost/index.php'
+            cleanup: true
+```
+
+You can load fixtures in tests the way the [Yii2 docs describe it](https://www.yiiframework.com/doc/guide/2.0/en/test-fixtures#using-fixtures).
 
 ## Example
 

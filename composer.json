@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "robuust/craft-fixtures",
     "description": "Yii2 fixtures for Craft 3",
     "type": "craft-plugin",
@@ -27,6 +27,13 @@
     "require": {
         "php": "^7.0",
         "craftcms/cms": "^3.0"
+    },
+    "require-dev": {
+        "phpmd/phpmd": "^2.6",
+        "squizlabs/php_codesniffer": "^3.2"
+    },
+    "suggest": {
+        "codeception/codeception": "Use the packaged test helpers with Codeception"
     },
     "autoload": {
         "psr-4": {
