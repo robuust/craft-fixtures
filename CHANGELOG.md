@@ -1,3 +1,7 @@
+## 1.0.3 - 2018-10-01
+### Added
+- Added Codeception 2.5 compatibility
+
 ## 1.0.2 - 2018-08-25
 ### Added
 - Added test helpers

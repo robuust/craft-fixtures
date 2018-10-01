@@ -67,10 +67,6 @@ class Craft extends Yii2
             $this->loadedFixtures = [];
         }
 
-        if ($this->client !== null && $this->client->getApplication()->has('session', true)) {
-            $this->client->getApplication()->session->close();
-        }
-
         $this->client->resetApplication();
         Framework::_after($test);
     }
