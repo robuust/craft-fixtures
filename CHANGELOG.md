@@ -1,3 +1,7 @@
+## 1.0.4 - 2018-11-13
+### Added
+- Extracted saveElement and deleteElement into methods
+
 ## 1.0.3 - 2018-10-01
 ### Added
 - Added Codeception 2.5 compatibility

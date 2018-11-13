@@ -59,7 +59,7 @@ abstract class ElementFixture extends ActiveFixture
                 $element->$handle = $value;
             }
 
-            if (!Craft::$app->getElements()->saveElement($element)) {
+            if (!$this->saveElement($element)) {
                 throw new ErrorException(join(' ', $element->getErrorSummary(true)));
             }
 
@@ -76,7 +76,7 @@ abstract class ElementFixture extends ActiveFixture
             $element = $this->getElement($data);
 
             if ($element) {
-                Craft::$app->getElements()->deleteElement($element);
+                $this->deleteElement($element);
             }
         }
 
@@ -116,5 +116,27 @@ abstract class ElementFixture extends ActiveFixture
         }
 
         return $query->one();
+    }
+
+    /**
+     * Save element.
+     *
+     * @param Element $element
+     *
+     * @return bool
+     */
+    protected function saveElement(Element $element): bool
+    {
+        return Craft::$app->getElements()->saveElement($element);
+    }
+
+    /**
+     * Delete element.
+     *
+     * @param Element $element
+     */
+    protected function deleteElement(Element $element): void
+    {
+        Craft::$app->getElements()->deleteElement($element);
     }
 }
