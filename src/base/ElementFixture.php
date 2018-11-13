@@ -111,7 +111,7 @@ abstract class ElementFixture extends ActiveFixture
 
         foreach ($data as $key => $value) {
             if ($this->isPrimaryKey($key)) {
-                $query = $query->$key($value);
+                $query = $query->$key(addcslashes($value, ','));
             }
         }
 

@@ -2,6 +2,9 @@
 ### Added
 - Extracted saveElement and deleteElement into methods
 
+### Fixed
+- Escape comma's when looking up elements so it is always an exact match
+
 ## 1.0.3 - 2018-10-01
 ### Added
 - Added Codeception 2.5 compatibility
