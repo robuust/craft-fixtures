@@ -95,6 +95,24 @@ EntryFixture will define `$this->sectionIds` with all section handles as key. It
 
 Its primary keys are: `sectionId`, `typeId` and `title`.
 
+#### GlobalSet
+
+Extend `robuust\fixtures\base\GlobalSetFixture` to update (!) globals (they must already exist). Its datafile could look like this:
+
+```php
+<?php
+
+return [
+    [
+        'handle' => 'contact'
+        'contactAddress' => 'foo',
+        'contactCity' => 'bar',
+    ],
+];
+```
+
+Its primary key is: `handle`, the handle of the (already existing) global set.
+
 ### Running fixtures
 
 Once you install the Plugin in Craft, you can run some command line actions. When you run `./craft` in the command line, you will now see these actions:

@@ -1,3 +1,7 @@
+## 1.0.5 - 2018-11-15
+### Added
+- Added support for GlobalSet fixtures
+
 ## 1.0.4 - 2018-11-13
 ### Added
 - Extracted saveElement and deleteElement into methods
