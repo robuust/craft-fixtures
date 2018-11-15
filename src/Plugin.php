@@ -17,7 +17,7 @@ use robuust\fixtures\controllers\MigrateController;
 class Plugin extends \craft\base\Plugin
 {
     /**
-     * Register fixtures aliases
+     * Register fixtures aliases.
      *
      * @var array
      */
@@ -26,7 +26,7 @@ class Plugin extends \craft\base\Plugin
     ];
 
     /**
-     * Register fixtures controllers
+     * Register fixtures controllers.
      *
      * @var array
      */
@@ -45,7 +45,7 @@ class Plugin extends \craft\base\Plugin
     ];
 
     /**
-     * Register fixtures controller namespace
+     * Register fixtures controller namespace.
      *
      * @var string
      */

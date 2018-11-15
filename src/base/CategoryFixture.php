@@ -6,7 +6,7 @@ use Craft;
 use craft\elements\Category;
 
 /**
- * Fixture for Category Model
+ * Fixture for Category Model.
  *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust

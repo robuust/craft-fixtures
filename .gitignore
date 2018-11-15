@@ -1,2 +1,5 @@
+.vscode
+.php_cs.dist
+.php_cs.cache
 composer.lock
 /vendor

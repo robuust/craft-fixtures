@@ -6,7 +6,7 @@ use Craft;
 use craft\elements\Entry;
 
 /**
- * Fixture for Entry Model
+ * Fixture for Entry Model.
  *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust

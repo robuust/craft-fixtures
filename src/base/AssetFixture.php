@@ -6,7 +6,7 @@ use Craft;
 use craft\elements\Asset;
 
 /**
- * Fixture for Asset Model
+ * Fixture for Asset Model.
  *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
  * @copyright Copyright (c) 2018, Robuust
