@@ -1,3 +1,7 @@
+## 1.0.6 - 2018-11-15
+### Added
+- Added support for Tag fixtures
+
 ## 1.0.5 - 2018-11-15
 ### Added
 - Added support for GlobalSet fixtures
