@@ -12,7 +12,7 @@ use craft\base\Element;
  * Fixture for Element Model.
  *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
- * @copyright Copyright (c) 2018, Robuust
+ * @copyright Copyright (c) 2019, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital

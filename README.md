@@ -113,6 +113,42 @@ return [
 
 Its primary key is: `handle`, the handle of the (already existing) global set.
 
+#### Tag
+
+Extend `robuust\fixtures\base\TagFixture` to add tags. Its datafile could look like this:
+
+```php
+<?php
+
+return [
+    [
+        'groupId' => $this->groupIds['tags'],
+        'title' => 'Tag',
+    ],
+];
+```
+
+TagFixture will define `$this->groupIds` with all tag group handles as key.
+
+Its primary keys are: `groupId` and `title`.
+
+#### User
+
+Extend `robuust\fixtures\base\UserFixture` to add users. Its datafile could look like this:
+
+```php
+<?php
+
+return [
+    [
+        'username' => 'User',
+        'email' => 'info@example.com',
+    ],
+];
+```
+
+Its primary keys are: `username` and `email`.
+
 ### Running fixtures
 
 Once you install the Plugin in Craft, you can run some command line actions. When you run `./craft` in the command line, you will now see these actions:

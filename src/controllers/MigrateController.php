@@ -12,7 +12,7 @@ use yii\helpers\Console;
  * except for that it disables Craft's audit columns in the inserts.
  *
  * @author    Bob Olde Hampsink <bob@robuust.digital>
- * @copyright Copyright (c) 2018, Robuust
+ * @copyright Copyright (c) 2019, Robuust
  * @license   MIT
  *
  * @see       https://robuust.digital

@@ -1,3 +1,7 @@
+## 1.0.7 - 2019-02-04
+### Added
+- Added support for User fixtures
+
 ## 1.0.6 - 2018-11-15
 ### Added
 - Added support for Tag fixtures
