@@ -1,5 +1,5 @@
 {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "name": "robuust/craft-fixtures",
     "description": "Yii2 fixtures for Craft 3",
     "type": "craft-plugin",

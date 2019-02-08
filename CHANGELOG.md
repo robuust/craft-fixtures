@@ -1,3 +1,7 @@
+## 1.0.8 - 2019-02-08
+### Fixed
+- Force hard delete when deleting elements
+
 ## 1.0.7 - 2019-02-04
 ### Added
 - Added support for User fixtures
