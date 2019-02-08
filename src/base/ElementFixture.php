@@ -8,7 +8,7 @@ use yii\base\Event;
 use yii\base\InvalidConfigException;
 use yii\test\ActiveFixture;
 use craft\base\Element;
-use craft\events\DeleteElementEvent;
+use craft\events\ElementEvent;
 use craft\services\Elements;
 
 /**
@@ -34,7 +34,7 @@ abstract class ElementFixture extends ActiveFixture
         }
 
         // Force hard deletes
-        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (DeleteElementEvent $event) {
+        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (ElementEvent $event) {
             $event->hardDelete = true;
         });
     }

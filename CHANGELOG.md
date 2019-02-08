@@ -4,6 +4,7 @@
 
 ### Fixed
 - Register before delete event listener only once
+- Added compatibility for Craft 3.0.x
 
 ## 1.0.8 - 2019-02-08
 ### Fixed
