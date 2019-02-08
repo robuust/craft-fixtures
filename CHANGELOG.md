@@ -1,3 +1,7 @@
+## 1.0.9 - 2019-02-08
+### Fixed
+- Register before delete event listener only once
+
 ## 1.0.8 - 2019-02-08
 ### Fixed
 - Force hard delete when deleting elements

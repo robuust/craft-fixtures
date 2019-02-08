@@ -32,6 +32,11 @@ abstract class ElementFixture extends ActiveFixture
         if (!($this->getElement() instanceof Element)) {
             throw new InvalidConfigException('"modelClass" must be an Element');
         }
+
+        // Force hard deletes
+        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (DeleteElementEvent $event) {
+            $event->hardDelete = true;
+        });
     }
 
     /**
@@ -140,11 +145,6 @@ abstract class ElementFixture extends ActiveFixture
      */
     protected function deleteElement(Element $element): void
     {
-        // Force a hard delete
-        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (DeleteElementEvent $event) {
-            $event->hardDelete = true;
-        });
-
         Craft::$app->getElements()->deleteElement($element);
     }
 }
