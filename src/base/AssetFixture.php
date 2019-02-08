@@ -4,6 +4,7 @@ namespace robuust\fixtures\base;
 
 use Craft;
 use craft\elements\Asset;
+use craft\records\VolumeFolder;
 
 /**
  * Fixture for Asset Model.
@@ -20,6 +21,38 @@ abstract class AssetFixture extends ElementFixture
      * {@inheritdoc}
      */
     public $modelClass = Asset::class;
+
+    /**
+     * @var array
+     */
+    protected $volumeIds = [];
+
+    /**
+     * @var array
+     */
+    protected $folderIds = [];
+
+    /**
+     * {@inheritdoc}
+     */
+    public function init(): void
+    {
+        parent::init();
+
+        /** @var \craft\services\Volumes */
+        $volumeService = Craft::$app->getVolumes();
+
+        // Get all volume and folder id's
+        $volumes = $volumeService->getAllVolumes();
+        foreach ($volumes as $volume) {
+            $this->volumeIds[$volume->handle] = $volume->id;
+            $this->folderIds[$volume->handle] = VolumeFolder::findOne([
+                'parentId' => null,
+                'name' => $volume->name,
+                'volumeId' => $volume->id,
+            ])->id;
+        }
+    }
 
     /**
      * {@inheritdoc}

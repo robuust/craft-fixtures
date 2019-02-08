@@ -1,4 +1,7 @@
 ## 1.0.9 - 2019-02-08
+### Added
+- Added ways to get volume/folder id's in Asset fixtures
+
 ### Fixed
 - Register before delete event listener only once
 
