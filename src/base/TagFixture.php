@@ -33,7 +33,7 @@ abstract class TagFixture extends ElementFixture
     {
         parent::init();
 
-        /** @var \craft\services\Categories */
+        /** @var \craft\services\Tags */
         $tagsService = Craft::$app->getTags();
 
         // Get all group id's

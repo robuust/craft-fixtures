@@ -1,3 +1,7 @@
+## 1.0.10 - 2019-03-11
+### Added
+- Added support for Commerce Product fixtures
+
 ## 1.0.9 - 2019-02-08
 ### Added
 - Added ways to get volume/folder id's in Asset fixtures

@@ -149,6 +149,25 @@ return [
 
 Its primary keys are: `username` and `email`.
 
+#### Product
+
+Extend `robuust\fixtures\base\Product` to add products. Its datafile could look like this:
+
+```php
+<?php
+
+return [
+    [
+        'typeId' => $this->productTypeIds['clothes'],
+        'title' => 'Product',
+    ],
+];
+```
+
+ProductFixture will define `$this->productTypeIds` with all product type handles as key.
+
+Its primary keys are: `typeId` and `title`.
+
 ### Running fixtures
 
 Once you install the Plugin in Craft, you can run some command line actions. When you run `./craft` in the command line, you will now see these actions:
