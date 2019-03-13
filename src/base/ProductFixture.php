@@ -3,7 +3,9 @@
 namespace robuust\fixtures\base;
 
 use Craft;
+use craft\base\Element;
 use craft\commerce\elements\Product;
+use craft\commerce\elements\Variant;
 
 /**
  * Fixture for Product model.
@@ -51,5 +53,19 @@ class ProductFixture extends ElementFixture
     protected function isPrimaryKey(string $key): bool
     {
         return $key == 'typeId' || $key == 'title';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function deleteElement(Element $element): void
+    {
+        $variants = Variant::find()->productId($element->id)->all();
+
+        foreach ($variants as $variant) {
+            parent::deleteElement($variant);
+        }
+
+        parent::deleteElement($element);
     }
 }

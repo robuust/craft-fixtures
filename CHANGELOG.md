@@ -1,3 +1,7 @@
+## 1.0.11 - 2019-03-13
+### Fixed
+- Make sure product variants are always fully unloaded
+
 ## 1.0.10 - 2019-03-11
 ### Added
 - Added support for Commerce Product fixtures
