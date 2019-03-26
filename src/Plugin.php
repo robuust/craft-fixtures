@@ -2,7 +2,10 @@
 
 namespace robuust\fixtures;
 
+use yii\base\Event;
 use yii\console\controllers\FixtureController;
+use craft\events\ElementEvent;
+use craft\services\Elements;
 use robuust\fixtures\controllers\MigrateController;
 
 /**
@@ -50,4 +53,18 @@ class Plugin extends \craft\base\Plugin
      * @var string
      */
     public $controllerNamespace = 'robuust\fixtures\controllers';
+
+    /**
+     * Force hard deletes on Craft 3.1.
+     */
+    public function init()
+    {
+        parent::init();
+
+        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (ElementEvent $event) {
+            if (isset($event->hardDelete)) {
+                $event->hardDelete = true;
+            }
+        });
+    }
 }

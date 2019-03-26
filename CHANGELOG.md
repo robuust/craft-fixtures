@@ -1,3 +1,7 @@
+## 1.0.12 - 2019-03-26
+### Changed
+- Only hard delete via controller actions, not directly in fixture itself
+
 ## 1.0.11 - 2019-03-13
 ### Fixed
 - Make sure product variants are always fully unloaded

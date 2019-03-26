@@ -4,12 +4,9 @@ namespace robuust\fixtures\base;
 
 use Craft;
 use yii\base\ErrorException;
-use yii\base\Event;
 use yii\base\InvalidConfigException;
 use yii\test\ActiveFixture;
 use craft\base\Element;
-use craft\events\ElementEvent;
-use craft\services\Elements;
 
 /**
  * Fixture for Element Model.
@@ -32,13 +29,6 @@ abstract class ElementFixture extends ActiveFixture
         if (!($this->getElement() instanceof Element)) {
             throw new InvalidConfigException('"modelClass" must be an Element');
         }
-
-        // Force hard deletes on Craft 3.1
-        Event::on(Elements::class, Elements::EVENT_BEFORE_DELETE_ELEMENT, function (ElementEvent $event) {
-            if (isset($event->hardDelete)) {
-                $event->hardDelete = true;
-            }
-        });
     }
 
     /**
