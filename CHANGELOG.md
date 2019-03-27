@@ -1,3 +1,7 @@
+## 1.0.13 - 2019-03-27
+### Added
+- Added Product Variant errors when saving Product fixtures
+
 ## 1.0.12 - 2019-03-26
 ### Changed
 - Only hard delete via controller actions, not directly in fixture itself
