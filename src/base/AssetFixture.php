@@ -86,7 +86,7 @@ abstract class AssetFixture extends ElementFixture
         try {
             return parent::saveElement($element);
         } catch (\PHPUnit\Framework\Exception $e) {
-            break; // do nothing while testing
+            // do nothing while testing
         }
 
         return false;
