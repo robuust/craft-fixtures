@@ -68,7 +68,7 @@ class ProductFixture extends ElementFixture
         $errors = $element->getErrorSummary(true);
 
         foreach ($element->getVariants() as $variant) {
-            $errors[] = $variant->getErrorSummary(true);
+            $errors = array_merge($errors, $variant->getErrorSummary(true));
         }
 
         throw new ErrorException(join(' ', array_filter($errors)));
