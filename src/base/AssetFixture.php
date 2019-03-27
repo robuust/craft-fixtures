@@ -74,7 +74,7 @@ abstract class AssetFixture extends ElementFixture
             }
 
             if (!$result) {
-                throw new ErrorException(join(' ', $element->getErrorSummary(true)));
+                $this->getErrors($element);
             }
 
             $this->data[$alias] = array_merge($data, ['id' => $element->id]);

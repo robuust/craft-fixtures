@@ -2,7 +2,6 @@
 
 namespace robuust\fixtures\base;
 
-use yii\base\ErrorException;
 use craft\elements\GlobalSet;
 
 /**
@@ -36,7 +35,7 @@ abstract class GlobalSetFixture extends ElementFixture
             }
 
             if (!$this->saveElement($element)) {
-                throw new ErrorException(join(' ', $element->getErrorSummary(true)));
+                $this->getErrors($element);
             }
 
             $this->data[$alias] = array_merge($data, ['id' => $element->id]);

@@ -60,7 +60,7 @@ abstract class ElementFixture extends ActiveFixture
             }
 
             if (!$this->saveElement($element)) {
-                throw new ErrorException(join(' ', $element->getErrorSummary(true)));
+                $this->getErrors($element);
             }
 
             $this->data[$alias] = array_merge($data, ['id' => $element->id]);
@@ -128,6 +128,18 @@ abstract class ElementFixture extends ActiveFixture
     protected function saveElement(Element $element): bool
     {
         return Craft::$app->getElements()->saveElement($element);
+    }
+
+    /**
+     * Get element errors.
+     *
+     * @param Element $element
+     *
+     * @throws ErrorException
+     */
+    protected function getErrors(Element $element): void
+    {
+        throw new ErrorException(join(' ', $element->getErrorSummary(true)));
     }
 
     /**
