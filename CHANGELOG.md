@@ -1,6 +1,10 @@
+## 1.0.15 - 2019-03-27
+### Fixed
+- Fixed issue with Assets in tests
+
 ## 1.0.14 - 2019-03-27
 ### Changed
-- Also hard delete from fixtures store, for tests.
+- Also hard delete from fixtures store, for tests
 
 ## 1.0.13 - 2019-03-27
 ### Added

@@ -3,7 +3,6 @@
 namespace robuust\fixtures\base;
 
 use Craft;
-use craft\base\Element;
 use craft\elements\Asset;
 use craft\records\VolumeFolder;
 
@@ -58,6 +57,53 @@ abstract class AssetFixture extends ElementFixture
     /**
      * {@inheritdoc}
      */
+    public function load(): void
+    {
+        $this->data = [];
+        foreach ($this->getData() as $alias => $data) {
+            $element = $this->getElement();
+
+            foreach ($data as $handle => $value) {
+                $element->$handle = $value;
+            }
+
+            try {
+                $result = $this->saveElement($element);
+            } catch (\PHPUnit\Framework\Exception $e) {
+                break; // do nothing while testing
+            }
+
+            if (!$result) {
+                $this->getErrors($element);
+            }
+
+            $this->data[$alias] = array_merge($data, ['id' => $element->id]);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function unload(): void
+    {
+        foreach ($this->getData() as $data) {
+            $element = $this->getElement($data);
+
+            if ($element) {
+                try {
+                    $this->deleteElement($element);
+                } catch (\PHPUnit\Framework\Exception $e) {
+                    break; // do nothing while testing
+                }
+            }
+        }
+
+        $this->data = [];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     protected function isPrimaryKey(string $key): bool
     {
         return $key == 'volumeId' || $key == 'folderId' || $key == 'filename' || $key == 'title';
@@ -76,31 +122,5 @@ abstract class AssetFixture extends ElementFixture
         }
 
         return $element;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function saveElement(Element $element): bool
-    {
-        try {
-            return parent::saveElement($element);
-        } catch (\PHPUnit\Framework\Exception $e) {
-            // do nothing while testing
-        }
-
-        return false;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function deleteElement(Element $element): void
-    {
-        try {
-            parent::deleteElement($element);
-        } catch (\PHPUnit\Framework\Exception $e) {
-            // do nothing while testing
-        }
     }
 }
