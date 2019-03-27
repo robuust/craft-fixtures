@@ -3,6 +3,7 @@
 namespace robuust\fixtures\base;
 
 use Craft;
+use yii\base\ErrorException;
 use craft\base\Element;
 use craft\commerce\elements\Product;
 use craft\commerce\elements\Variant;
@@ -53,6 +54,24 @@ class ProductFixture extends ElementFixture
     protected function isPrimaryKey(string $key): bool
     {
         return $key == 'typeId' || $key == 'title';
+    }
+
+    /**
+     * Get element errors.
+     *
+     * @param Element $element
+     *
+     * @throws ErrorException
+     */
+    protected function getErrors(Element $element): void
+    {
+        $errors = $element->getErrorSummary(true);
+
+        foreach ($element->getVariants() as $variant) {
+            $errors[] = $variant->getErrorSummary(true);
+        }
+
+        throw new ErrorException(join(' ', array_filter($errors)));
     }
 
     /**
