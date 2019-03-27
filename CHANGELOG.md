@@ -1,3 +1,7 @@
+## 1.0.14 - 2019-03-27
+### Changed
+- Also hard delete from fixtures store, for tests.
+
 ## 1.0.13 - 2019-03-27
 ### Added
 - Added Product Variant errors when saving Product fixtures
