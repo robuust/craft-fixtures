@@ -52,8 +52,10 @@ abstract class ElementFixture extends ActiveFixture
     public function load(): void
     {
         $this->data = [];
+        $modelClass = $this->modelClass;
+
         foreach ($this->getData() as $alias => $data) {
-            $element = $this->getElement();
+            $element = $this->getElement($data) ?? new $modelClass();
 
             foreach ($data as $handle => $value) {
                 $element->$handle = $value;

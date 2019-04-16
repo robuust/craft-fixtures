@@ -1,3 +1,7 @@
+## 1.0.16 - 2019-04-16
+### Fixed
+- Fixed issue with multisite Singles
+
 ## 1.0.15 - 2019-03-27
 ### Fixed
 - Fixed issue with Assets in tests
