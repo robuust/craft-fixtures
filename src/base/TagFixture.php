@@ -48,6 +48,6 @@ abstract class TagFixture extends ElementFixture
      */
     protected function isPrimaryKey(string $key): bool
     {
-        return $key == 'groupId' || $key == 'title';
+        return parent::isPrimaryKey($key) || in_array($key, ['groupId', 'title']);
     }
 }

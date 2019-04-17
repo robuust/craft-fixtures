@@ -59,6 +59,6 @@ abstract class EntryFixture extends ElementFixture
      */
     protected function isPrimaryKey(string $key): bool
     {
-        return $key == 'sectionId' || $key == 'typeId' || $key == 'title';
+        return parent::isPrimaryKey($key) || in_array($key, ['sectionId', 'typeId', 'title']);
     }
 }

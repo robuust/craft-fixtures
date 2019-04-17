@@ -25,6 +25,6 @@ abstract class UserFixture extends ElementFixture
      */
     protected function isPrimaryKey(string $key): bool
     {
-        return $key == 'username';
+        return parent::isPrimaryKey($key) || $key === 'username';
     }
 }

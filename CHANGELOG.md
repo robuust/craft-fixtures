@@ -1,3 +1,7 @@
+## 1.1.0 - 2019-04-17
+### Added
+- Makes site id a primary key for all fixtures
+
 ## 1.0.17 - 2019-04-17
 ### Added
 - Added ways to get site id's in fixtures
