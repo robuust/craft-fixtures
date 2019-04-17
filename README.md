@@ -32,6 +32,9 @@ This plugin provides a base for fixtures for Craft elements. The main logic is d
 `ElementFixture::getElement(array $data): Element?` to get an element which is identified by the given data. The defined primary keys are used to identify the given data.
 
 
+#### All fixtures
+ElementFixture will define `$this->siteIds` with all site handles as keys.
+
 #### Asset
 
 Extend `robuust\fixtures\base\AssetFixture` to add assets. Its datafile could look like this:
@@ -46,13 +49,15 @@ return [
     [
         'tempFilePath' => 'product.jpg',
         'filename' => 'product.jpg',
-        'volumeId' => 1,
-        'folderId' => 1,
+        'volumeId' => $this->volumeIds['products'],
+        'folderId' => $this->folderIds['clothes'],
     ],
 ];
 ```
 
-This will upload and product.jpg as an asset.
+This will upload and link product.jpg as an asset.
+
+AssetFixture will define `$this->volumeIds` and `$this->folderIds` with their handles as key.
 
 Its primary keys are: `volumeId`, `folderId`, `filename` and `title`.
 
