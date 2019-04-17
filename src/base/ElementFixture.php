@@ -20,6 +20,11 @@ use craft\base\Element;
 abstract class ElementFixture extends ActiveFixture
 {
     /**
+     * @var array
+     */
+    protected $siteIds = [];
+
+    /**
      * {@inheritdoc}
      */
     public function init(): void
@@ -28,6 +33,14 @@ abstract class ElementFixture extends ActiveFixture
 
         if (!($this->getElement() instanceof Element)) {
             throw new InvalidConfigException('"modelClass" must be an Element');
+        }
+
+        /** @var \craft\services\Sites */
+        $sites = Craft::$app->getSites()->getAllSites();
+
+        // Get all site id's
+        foreach ($sites as $site) {
+            $this->siteIds[$site->handle] = $site->id;
         }
     }
 
