@@ -1,5 +1,5 @@
 ## 1.0.17 - 2019-04-17
-### Fixed
+### Added
 - Added ways to get site id's in fixtures
 
 ## 1.0.16 - 2019-04-16
