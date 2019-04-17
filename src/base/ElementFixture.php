@@ -105,7 +105,10 @@ abstract class ElementFixture extends ActiveFixture
      *
      * @return bool
      */
-    abstract protected function isPrimaryKey(string $key): bool;
+    protected function isPrimaryKey(string $key): bool
+    {
+        return $key == 'siteId';
+    }
 
     /**
      * Get element model.

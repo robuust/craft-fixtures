@@ -55,6 +55,6 @@ abstract class GlobalSetFixture extends ElementFixture
      */
     protected function isPrimaryKey(string $key): bool
     {
-        return $key == 'handle';
+        return parent::isPrimaryKey($key) || $key === 'handle';
     }
 }

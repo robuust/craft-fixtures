@@ -78,7 +78,7 @@ return [
 
 CategoryFixture will define `$this->groupIds` with all category group handles as key.
 
-Its primary keys are: `groupId` and `title`.
+Its primary keys are: `siteId`, `groupId` and `title`.
 
 #### Entry
 
@@ -98,7 +98,7 @@ return [
 
 EntryFixture will define `$this->sectionIds` with all section handles as key. It will also define `$this->typeIds` with all section handles as the first key and the entry type handles as the second key.
 
-Its primary keys are: `sectionId`, `typeId` and `title`.
+Its primary keys are: `siteId`, `sectionId`, `typeId` and `title`.
 
 #### GlobalSet
 
@@ -116,7 +116,7 @@ return [
 ];
 ```
 
-Its primary key is: `handle`, the handle of the (already existing) global set.
+Its primary keys are: `siteId` and `handle`, the handle being the one of the (already existing) global set.
 
 #### Tag
 
@@ -135,7 +135,7 @@ return [
 
 TagFixture will define `$this->groupIds` with all tag group handles as key.
 
-Its primary keys are: `groupId` and `title`.
+Its primary keys are: `siteId`, `groupId` and `title`.
 
 #### User
 
@@ -152,7 +152,7 @@ return [
 ];
 ```
 
-Its primary keys are: `username` and `email`.
+Its primary keys are: `siteId`, `username` and `email`.
 
 #### Product
 
@@ -171,7 +171,7 @@ return [
 
 ProductFixture will define `$this->productTypeIds` with all product type handles as key.
 
-Its primary keys are: `typeId` and `title`.
+Its primary keys are: `siteId`, `typeId` and `title`.
 
 ### Running fixtures
 

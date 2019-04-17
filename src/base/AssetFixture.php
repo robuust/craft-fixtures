@@ -106,7 +106,7 @@ abstract class AssetFixture extends ElementFixture
      */
     protected function isPrimaryKey(string $key): bool
     {
-        return $key == 'volumeId' || $key == 'folderId' || $key == 'filename' || $key == 'title';
+        return parent::isPrimaryKey($key) || in_array($key, ['volumeId', 'folderId', 'filename', 'title']);
     }
 
     /**
