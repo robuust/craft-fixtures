@@ -55,7 +55,7 @@ return [
 ];
 ```
 
-This will upload and product.jpg as an asset.
+This will upload and link product.jpg as an asset.
 
 AssetFixture will define `$this->volumeIds` and `$this->folderIds` with their handles as key.
 
