@@ -1,3 +1,7 @@
+## 1.1.1 - 2019-04-24
+### Fixed
+- Fixtures that had any other status than enabled/live did not unload.
+
 ## 1.1.0 - 2019-04-17
 ### Added
 - Makes site id a primary key for all fixtures
