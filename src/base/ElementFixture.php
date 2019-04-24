@@ -125,7 +125,7 @@ abstract class ElementFixture extends ActiveFixture
             return new $modelClass();
         }
 
-        $query = $modelClass::find();
+        $query = $modelClass::find()->anyStatus();
 
         foreach ($data as $key => $value) {
             if ($this->isPrimaryKey($key)) {
