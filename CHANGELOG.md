@@ -1,3 +1,7 @@
+## 1.1.2 - 2020-06-21
+### Changed
+- Added PHP8 support
+
 ## 1.1.1 - 2019-04-24
 ### Fixed
 - Fixtures that had any other status than enabled/live did not unload.
